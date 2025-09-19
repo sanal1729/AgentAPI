@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1705.6
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Agent.Api", "Agent.Api\Agent.Api.csproj", "{688A1ECD-98DC-411D-8475-B3F5467C99B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Agent.Contracts", "Agent.Contracts\Agent.Contracts.csproj", "{AAA5F46C-4084-4456-9A51-4147DE6550B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Agent.Application", "Agent.Application\Agent.Application.csproj", "{B9F2ADB4-1766-44B3-800A-73C8D715096D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Agent.Infrastructure", "Agent.Infrastructure\Agent.Infrastructure.csproj", "{CFC4B772-1B1D-4B70-9694-B4EE03EDFB9C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Agent.Domain", "Agent.Domain\Agent.Domain.csproj", "{4952844E-4DEC-404C-BE7B-D1A59B7A90B5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Requests", "Requests", "{7F0534FF-9AE6-4CB6-A82F-0C9EDBC59731}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dockers", "Dockers", "{568C1932-2286-13E0-DCCF-57E129E3617E}"
+	ProjectSection(SolutionItems) = preProject
+		llama = llama
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{688A1ECD-98DC-411D-8475-B3F5467C99B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{688A1ECD-98DC-411D-8475-B3F5467C99B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{688A1ECD-98DC-411D-8475-B3F5467C99B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{688A1ECD-98DC-411D-8475-B3F5467C99B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAA5F46C-4084-4456-9A51-4147DE6550B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAA5F46C-4084-4456-9A51-4147DE6550B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAA5F46C-4084-4456-9A51-4147DE6550B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAA5F46C-4084-4456-9A51-4147DE6550B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9F2ADB4-1766-44B3-800A-73C8D715096D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9F2ADB4-1766-44B3-800A-73C8D715096D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9F2ADB4-1766-44B3-800A-73C8D715096D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9F2ADB4-1766-44B3-800A-73C8D715096D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFC4B772-1B1D-4B70-9694-B4EE03EDFB9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFC4B772-1B1D-4B70-9694-B4EE03EDFB9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFC4B772-1B1D-4B70-9694-B4EE03EDFB9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFC4B772-1B1D-4B70-9694-B4EE03EDFB9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4952844E-4DEC-404C-BE7B-D1A59B7A90B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4952844E-4DEC-404C-BE7B-D1A59B7A90B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4952844E-4DEC-404C-BE7B-D1A59B7A90B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4952844E-4DEC-404C-BE7B-D1A59B7A90B5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F7639E8B-04AA-4E0A-A1C2-6B80AD82ADD6}
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		Policies = $0
+		$0.DotNetNamingPolicy = $1
+		$1.DirectoryNamespaceAssociation = PrefixedHierarchical
+	EndGlobalSection
+EndGlobal

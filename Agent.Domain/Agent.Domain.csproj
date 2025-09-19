@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Common\" />
+    <None Remove="Common\Errors\" />
+    <None Remove="Common\Models\" />
+    <None Remove="Common\User\Entities\" />
+    <None Remove="Common\User\ValueObjects\" />
+    <None Remove="Common\User\Enums\" />
+    <None Remove="Entities\" />
+    <None Remove="Aggregates\" />
+    <None Remove="Aggregates\Organization\" />
+    <None Remove="Aggregates\Organization\Entities\" />
+    <None Remove="Aggregates\Organization\Enums\" />
+    <None Remove="Aggregates\Organization\ValueObjects\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Common\" />
+    <Folder Include="Common\Errors\" />
+    <Folder Include="Entities\" />
+    <Folder Include="Aggregates\" />
+    <Folder Include="Aggregates\Organization\" />
+    <Folder Include="Aggregates\Organization\Entities\" />
+    <Folder Include="Aggregates\Organization\Enums\" />
+    <Folder Include="Aggregates\Organization\ValueObjects\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="ErrorOr" Version="2.0.1" />
+    <PackageReference Include="MediatR" Version="11.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="9.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.5" />
+    <PackageReference Include="System.Linq.Dynamic.Core" Version="1.6.4" />
+  </ItemGroup>
+</Project>

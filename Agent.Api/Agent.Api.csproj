@@ -1,0 +1,56 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>abcd25ee-0464-4a41-977d-7eb0b66a4708</UserSecretsId>
+    <DockerComposeProjectPath>../docker-compose.dcproj</DockerComposeProjectPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'https' "/>
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'http' "/>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.5"/>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.5">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="8.1.2"/>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3"/>
+    <PackageReference Include="Mapster" Version="7.4.0"/>
+    <PackageReference Include="Mapster.DependencyInjection" Version="1.0.1"/>
+    <PackageReference Include="Microsoft.AspNetCore.ResponseCompression" Version="2.3.0"/>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.21.2"/>
+    <PackageReference Include="Microsoft.Extensions.Http.Polly" Version="9.0.5"/>
+    <PackageReference Include="Polly" Version="8.5.2"/>
+    <PackageReference Include="Polly.Extensions.Http" Version="3.0.0"/>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Agent.Application\Agent.Application.csproj">
+      <GlobalPropertiesToRemove/>
+    </ProjectReference>
+    <ProjectReference Include="..\Agent.Contracts\Agent.Contracts.csproj">
+      <GlobalPropertiesToRemove/>
+    </ProjectReference>
+    <ProjectReference Include="..\Agent.Infrastructure\Agent.Infrastructure.csproj">
+      <GlobalPropertiesToRemove/>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Controllers\"/>
+    <None Remove="Middleware\"/>
+    <None Remove="Filters\"/>
+    <None Remove="Common\"/>
+    <None Remove="Common\Errors\"/>
+    <None Remove="Common\Http\"/>
+    <None Remove="Common\Mapping\"/>
+    <None Remove="ExternalClients\"/>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controllers\"/>
+    <Folder Include="Middleware\"/>
+    <Folder Include="Filters\"/>
+    <Folder Include="Common\"/>
+    <Folder Include="Common\Errors\"/>
+    <Folder Include="Common\Http\"/>
+    <Folder Include="Common\Mapping\"/>
+    <Folder Include="ExternalClients\"/>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,130 @@
+﻿
+@hostname=localhost
+@port=7263
+@host={{hostname}}:{{port}}
+@token = Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI3MjBlMGQ0OC0xODJlLTRlMjYtOWQzNy0xNjRjYzM2NmYzMzMiLCJqdGkiOiJiOWMzODEzZi1kODk4LTQ4NzAtYjYwOC05NGYwYTY1N2U5NGEiLCJlbWFpbCI6InJhakBnbWFpbC5jb20iLCJnaXZlbl9uYW1lIjoicmFqIiwiZmFtaWx5X25hbWUiOiJyYW0iLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjcyMGUwZDQ4LTE4MmUtNGUyNi05ZDM3LTE2NGNjMzY2ZjMzMyIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6Ik5hdGl2ZVVzZXIiLCJQZXJtaXNzaW9uIjpbIkNhbkNyZWF0ZSIsIkNhblJlYWQiLCJDYW5VcGRhdGUiXSwiZXhwIjoxNzU0NDMxMDQ4LCJpc3MiOiJBZ2VudCIsImF1ZCI6IkFnZW50In0.a-d1Im4lc77AoxXnex1scKEi2xt0rvKoXYQ_95vhDEtltYMqHhs22umvz2wbTm0TMAsL3a0EPYWnAG_-3Z-Ahg
+
+
+### 🔥 DELETE Organization
+DELETE https://{{host}}/organization
+Authorization: {{token}}
+Content-Type: application/json
+
+{
+  "id": "5429b88c-dd6c-48d3-8118-4634badb7259",
+  "name": "",
+  "countryCode": "",
+  "currencyCode": "",
+  "branches": []
+}
+
+
+
+
+
+### 🆕 POST Create New Organization
+POST https://{{host}}/organization
+Authorization: {{token}}
+Content-Type: application/json
+
+{
+  "name": "Agent",
+  "countryCode": "USA",
+  "currencyCode": "USD",
+  "branches": [
+    {
+      "name": "New York",
+      "code": "NY"
+    },
+    {
+      "name": "Texas",
+      "code": "TX"
+    },
+    {
+      "name": "Washington",
+      "code": "WA"
+    }
+  ]
+}
+
+###
+
+PUT https://{{host}}/organization
+Authorization: {{token}}
+Content-Type: application/json
+
+{
+  "id": "5429b88c-dd6c-48d3-8118-4634badb7259",
+  "name": "HCA",
+  "countryCode": "USA",
+  "currencyCode": "USD-EUR",
+  "branches": [
+    {
+      "id": "25af7043-2551-4cc5-88eb-9de943e8ea5d",
+      "name": "CANADA",
+      "code": "CAD"
+    },
+    {
+      "id": null,
+      "name": "TAQ",
+      "code": "QAT"
+    }
+  ]
+}
+
+###
+GET https://localhost:7263/organization?id=f00a29412-cb33-4a63-88d3-515be5b58826&name=Agent1&countryCode=USA&currencyCode=USD&branches=[{"id":"43f51c68-c967-4f70-ba18-0863c7c085c5","name":"Washington","code":"WA"},{"id":"4bbe9094-4bbc-43c3-a1f4-321eb1d5d72b","name":"Texas","code":"TX"},{"id":"723f78a4-e322-46e5-b42b-dd4be8778867","name":"New York","code":"NY"}] HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+
+
+### 🔍 GET Organization by ID (with JSON body)
+GET https://{{host}}/organization
+Authorization: {{token}}
+Content-Type: application/json
+
+{
+    "id": "9f707554-ee2d-4496-bb28-1bcdd36a1bdb"
+}
+
+
+
+
+GET https://{{host}}/weather?city=ernakulam
+Authorization: {{token}}
+###
+
+### Register User
+POST https://{{host}}/auth/register
+Content-Type: application/json
+
+{
+  "FirstName": "John",
+  "LastName": "Doe",
+  "Email": "johndoe@example.com",
+  "Password": "SecurePassword123"
+}
+###
+###
+### Login User
+
+
+
+
+POST https://{{host}}/auth/login
+Content-Type: application/json
+Accept: application/json
+{
+  "email": "johndoe@example2.com",
+  "password": "SecurePassword123"
+}
+
+###
+
+
+GET https://{{host}}/user/list
+Content-Type: application/json
+Authorization:  {{token}}
+###
+
+
